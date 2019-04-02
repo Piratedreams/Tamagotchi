@@ -1,10 +1,18 @@
-.top-heading {
- position: relative;
+h1 {
+position: center
 }
-.body {
-    background-color: gold;
+body {
+    background-color: #33F9FF;
+    background-image: css/images/anime-beach-gif-6;
 }
-.game-btns {
+button {
     height: 25px;
-    width: 25px;
+    width: 125px;
+    color: white;
+    background-color: blueviolet;
+    margin: 10px;
+}
+image {
+    
+    position: relative;
 }

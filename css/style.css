@@ -1,0 +1,10 @@
+.top-heading {
+ position: relative;
+}
+.body {
+    background-color: gold;
+}
+.game-btns {
+    height: 25px;
+    width: 25px;
+}

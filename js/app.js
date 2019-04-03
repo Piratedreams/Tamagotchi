@@ -47,6 +47,8 @@ class tomogachi{
 }
 const tomo = new tomogachi('shyboi ', 0);
 
+ name = $('#input-name').val();
+
 // ================================
 // starting and max values
 //=================================
@@ -64,6 +66,7 @@ let hunger = 1;
 const maxHunger = 10;
 
 let age = 0;
+const maxAge = 30;
 // timed events
 
 
@@ -105,34 +108,32 @@ boredboi();
 const sleepyboi = () => {
 if(seconds % 4 === 0){
     console.log('your tomogachi is getting sleepy');
-    sleepiness++;
     $('.sleepiness').text(sleepiness);
-}
+    sleepiness++;
+};
     if (sleepiness === maxSleepiness) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
-    }
+    };
      // make the lights turn off for the tomogachi.
 };
-
+sleepyboi();
 
 $('.sleep').on('click', () => {
             sleepiness = 1;
 });
-sleepyboi();
-
 
 const aging = () => {
     if(seconds % 15 === 0){
         age++;
-        console.log('one year older.')
+        console.log('one year older.');
         $('.age').text(age);
-    }
-    if(age === 30) {
+    };
+    if(age === maxAge) {
         alert('your Tomogachi has died of old age. ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
-    }
-}
+    };
+};
 aging();
 
 // Time interval

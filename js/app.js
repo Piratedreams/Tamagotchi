@@ -24,6 +24,8 @@ const secondsGoUp = () => {
 $('.start').on('click', () => {
     timePassing = setInterval(secondsGoUp, 1000);
     console.log('start was pressed');
+    console.log(timePassing);
+    console.log('new tomogachi was created.')
 });
 $('.stop').click(function () {
     clearInterval(timePassing);
@@ -43,6 +45,8 @@ class tomogachi{
         this.typeOfTomo = ''
     }
 }
+const tomo = new tomogachi('shyboi ', 0, 'lilOne');
+
 // ================================
 // starting and max values
 //=================================
@@ -102,6 +106,7 @@ if(seconds % 4 === 0){
     // if play is cilcked it resets the value of what it was at to 1. 
 $('.sleep').on('click', () => {
      sleepiness = 1;
+     // make the lights turn off for the tomogachi.
 });
 }
 }

@@ -1,9 +1,10 @@
 h1 {
-position: center
+position: center;
+color: white;
 }
 body {
     background-color: #33F9FF;
-    background-image: css/images/anime-beach-gif-6;
+    
 }
 button {
     height: 25px;
@@ -11,8 +12,4 @@ button {
     color: white;
     background-color: blueviolet;
     margin: 10px;
-}
-image {
-    
-    position: relative;
 }

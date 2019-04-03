@@ -4,7 +4,7 @@ color: white;
 }
 body {
     background-color: #33F9FF;
-    
+    background-size: cover;
 }
 button {
     height: 25px;
@@ -15,5 +15,5 @@ button {
 }
 h5 {
     color: white;
-    
+
 }

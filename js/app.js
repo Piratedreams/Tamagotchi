@@ -24,11 +24,12 @@ const secondsGoUp = () => {
 $('.start').on('click', () => {
     timePassing = setInterval(secondsGoUp, 1000);
     console.log('start was pressed');
-    console.log(timePassing);
+    console.log(seconds);
     console.log('new tomogachi was created.')
 });
 $('.stop').click(function () {
     clearInterval(timePassing);
+    clearInterval(secondsGoUp);
         console.log('stop was pressed');
 
 });
@@ -39,13 +40,12 @@ $('.stop').click(function () {
 
 
 class tomogachi{
-    constructor(name, age, typeOfTomo){
+    constructor(name, age){
         this.name = '',
-        this.age = 0,
-        this.typeOfTomo = ''
+        this.age = 0  
     }
 }
-const tomo = new tomogachi('shyboi ', 0, 'lilOne');
+const tomo = new tomogachi('shyboi ', 0);
 
 // ================================
 // starting and max values
@@ -76,7 +76,7 @@ if(seconds % 3 === 0 ){
         clearInterval(timePassing);
     }
 }
-// if play is cilcked it resets the value of what it was at to 1. 
+// if feed is cilcked it resets the value of what it was at to 1. 
 $('feed').on('click', () => {
     hunger = 1;
 });
@@ -95,6 +95,7 @@ $('.play').on('click', () => {
      boredom = 1;
 });
 }
+boredboi();
 const sleepyboi = () => {
 if(seconds % 4 === 0){
     console.log('your tomogachi is getting sleepy');
@@ -103,23 +104,26 @@ if(seconds % 4 === 0){
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
-    // if play is cilcked it resets the value of what it was at to 1. 
-$('.sleep').on('click', () => {
-     sleepiness = 1;
      // make the lights turn off for the tomogachi.
 });
 }
+$('.sleep').on('click', () => {
+            sleepiness = 1;
 }
+
+sleepyboi();
+let age = 0;
 const aging = () => {
     if(seconds % 15 === 0){
         age++;
+        console.log('one year older.')
     }
     if(age === 30) {
         alert('your Tomogachi has died of old age. ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
 }
-
+aging();
 
 // Time interval
 

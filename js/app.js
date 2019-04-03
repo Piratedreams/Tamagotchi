@@ -71,24 +71,26 @@ const hungryboi = () => {
 if(seconds % 3 === 0 ){
     hunger++;
     console.log('hunger has gone up');
-
+    $('.hunger').text(hunger);
+}
     if (hunger === maxHunger) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
-    
+        
 }
 $('.hunger').text(hunger);
 // if feed is cilcked it resets the value of what it was at to 1. 
 $('feed').on('click', () => {
     hunger = 1;
 });
-}
+
 const boredboi = () => {
 if(seconds % 2 === 0){
     console.log('your tomogachi is getting bored');
     boredom++;
     $('.boredom').text(boredom);
+}
     if (boredom === maxBoredom) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
@@ -98,25 +100,26 @@ if(seconds % 2 === 0){
 $('.play').on('click', () => {
      boredom = 1;
 });
-}
+
 boredboi();
 const sleepyboi = () => {
 if(seconds % 4 === 0){
     console.log('your tomogachi is getting sleepy');
     sleepiness++;
-    $('.spleepiness').text(sleepiness);
+    $('.sleepiness').text(sleepiness);
+}
     if (sleepiness === maxSleepiness) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
      // make the lights turn off for the tomogachi.
 };
-}
+
 
 $('.sleep').on('click', () => {
             sleepiness = 1;
 });
-
+sleepyboi();
 
 
 const aging = () => {

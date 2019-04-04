@@ -20,6 +20,8 @@ const secondsGoUp = () => {
         $('.minutes').text(minutes);
         console.log(timePassing);
     }
+    attributes();
+    deadboi();
 }
 $('.start').on('click', () => {
     timePassing = setInterval(secondsGoUp, 1000);
@@ -62,44 +64,37 @@ let sleepiness = 1;
 let hunger = 1;
 let age = 0;
 
-const hungryboi = () => {
+const deadboi = () => {
  if (hunger === 10) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
-    }
-}
-hungryboi();
-const boredboi = () => {
+ }
  if (boredom === 10) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
-}
-boredboi();
-const sleepyboi = () => {
  if (sleepiness === 10) {
         alert('your Tomogachi has died! ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
-};
-sleepyboi();
-const aging = () => {
      if(age === 30) {
         alert('your Tomogachi has died of old age. ;__; あなたのトモガチは死んでました。哀しい！')
         clearInterval(timePassing);
     }
 };
-aging();
 // Button pressing Functions
 // if play is cilcked it resets the value of what it was at to 1. 
 $('.play').on('click', () => {
     boredom = 1;
+    $('.boredom').text(boredom);
 });
 $('.sleep').on('click', () => {
-    sleepiness = 1;
+    sleepiness--;
+    $('.sleepiness').text(sleepiness);
 });
-$('feed').on('click', () => {
-    hunger = 1;
+$('.feed').on('click', () => {
+    hunger --;
+    $('.hunger').text(hunger);
 });
 
 // Display all of the stats
